@@ -1,0 +1,8 @@
+<h1>All songs</h1>
+<% @songs.each do |song| %>
+  <ul>
+    <div><%= link_to song.name, song_path(song)  %></div>
+  </ul>
+<% end %>
+
+<%= button_to "Add song", { :action => "new" }, :method => :get %>

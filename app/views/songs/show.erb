@@ -1,0 +1,4 @@
+<h1><%= @instance.name %></h1>
+
+<%= link_to @instance.artist.name, artist_path(@instance.artist) if @instance.artist %>
+<%= link_to @instance.genre.name, genre_path(@instance.genre) if @instance.genre %>

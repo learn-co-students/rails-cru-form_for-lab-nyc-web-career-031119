@@ -1,0 +1,13 @@
+  <h1>song name and info</h1>
+
+<div>
+  <li>
+    <%= @song.name %>
+    <%= @song.artist.name%>
+    <%= @song.genre.name%>
+    </li>
+  </div>
+
+
+
+  <%= link_to "Edit", edit_song_path%>

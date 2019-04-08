@@ -1,0 +1,9 @@
+<h1><%= @genre.name %></h1>
+<p>All the songs with this genre</p>
+<% @genre.songs.each do |song| %>
+  <%= link_to song.name, song_path(song) %>
+<% end %>
+<br>
+<br>
+<p><%= link_to "Change your genre", edit_genre_path %></p>
+<p><%= link_to "See all genres", genres_path %></p>

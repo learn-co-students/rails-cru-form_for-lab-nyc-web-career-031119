@@ -1,0 +1,8 @@
+<h1>Edit-a-Band</h1>
+<%= form_for @artist do |f| %>
+  <%= f.label "Artist Name" %>
+  <p><%= f.text_field :name %></p>
+  <%= f.label "Biography" %>
+  <p><%= f.text_area :bio %></p>
+  <%= f.submit "Update Artist" %>
+<% end %>

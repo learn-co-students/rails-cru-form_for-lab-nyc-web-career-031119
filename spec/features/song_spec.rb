@@ -74,6 +74,4 @@ describe 'index' do
     visit songs_path
     expect(page).to have_css("p", text: "My Song")
   end
-
-  
 end

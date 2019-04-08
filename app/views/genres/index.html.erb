@@ -1,0 +1,7 @@
+<% @genres.all.each do |genre| %>
+  <ul>
+    <div><%= link_to genre.name, genre_path(genre) %></div>
+  </ul>
+<% end %>
+
+<%= button_to "Add Genre", { :action => "new" }, :method => :get %>

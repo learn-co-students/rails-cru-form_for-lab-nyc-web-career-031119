@@ -1,0 +1,9 @@
+<%= form_for @song do |f| %>
+  <%= %>
+  <h2>Name:</h2><%= f.text_field :name %>
+    <h2>Artist:</h2><%= f.text_field :artist_id, placeholder: "#{@artist.name}", vaule: ""%>
+    <h2>Genre:</h2><%= f.text_field :genre_id, placeholder: "#{@genre.name}", vaule: ""%>
+
+  <%= f.submit %>
+
+<% end %>

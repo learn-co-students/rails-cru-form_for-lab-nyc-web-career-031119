@@ -58,3 +58,7 @@ table "songs"
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab' title='CRU with form_for Lab'>CRU with form_for Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-cru-form_for-lab'>CRU Rails Lab </a> on Learn.co and start learning to code for free.</p>
+
+
+
+<div><%= link_to genre.name, songs_path(genre) %></div>

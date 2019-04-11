@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
- before_action :find_artist, only:[:show, :edit]
+ before_action :find_artist, only:[:show, :edit, :update]
   def new
    @artist = Artist.new
   end
@@ -8,18 +8,16 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(artist_params)
-    @artist.save
-    redirect_to artist_path(@artist)
+    @artist = Artist.create(artist_params)
+    redirect_to @artist
   end
 
   def edit
   end
 
   def update
-    @artist = Artist.new(artist_params)
-    @artist.save
-    redirect_to artist_path(@artist)
+    @artist = Artist.update(artist_params)
+    redirect_to @artist
   end
 
   private

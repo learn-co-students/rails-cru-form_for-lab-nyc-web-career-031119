@@ -1,5 +1,5 @@
 class GenresController < ApplicationController
-  before_action :find_genre, only: [:show, :edit]
+  before_action :find_genre, only: [:show, :edit, :update]
 
   def new
    @genre = Genre.new
@@ -10,9 +10,8 @@ class GenresController < ApplicationController
   end
 
   def create
-    @genre = Genre.new(genre_params)
-    @genre.save
-    redirect_to genre_path(@genre)
+    @genre = Genre.create(genre_params)
+    redirect_to @genre
   end
 
   def edit
@@ -20,9 +19,8 @@ class GenresController < ApplicationController
   end
 
   def update
-    @genre = Genre.new(genre_params)
-    @genre.save
-    redirect_to genre_path(@genre)
+    @genre = Genre.update(genre_params)
+    redirect_to @genre
   end
   private
 
